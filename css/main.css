@@ -7,3 +7,8 @@ body {
   background-color: rgb(53, 49, 50);
   color: whitesmoke;
 }
+
+.tmdb-img {
+  width: 100px;
+  height: 50px;
+}

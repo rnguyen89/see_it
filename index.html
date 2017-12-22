@@ -34,14 +34,16 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-12">
+      <div class="col s12">
         <h1 class="center">Seeit</h1>
           <form action="#" id="js-search-form">
-            <fieldset>
+            <fieldset class="center">
+              <!-- <legend>Search popular movies based on year</legend> -->
+              <p class="center">Search most popular movies based on year</p>
               <label for="search">
-                <input type="text" name="search"    placeholder="Discover movies, TV shows, episodes, etc" class="js-search">
-                <input type="submit" value="Submit">
-              </label>
+                <input type="text" name="search"    placeholder="2011, 2013, 2015, 2017, etc" class="js-search">
+                </label>
+                <button class="btn red darken-2">Submit</button>
             </fieldset>
           </form>
       </div>
@@ -54,15 +56,9 @@
   <!-- container for results
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <section>
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
         <div class="js-results" aria-live="assertive">
           <p class="center">append results</p>
         </div>
-      </div>
-    </div> <!-- end of row -->
-  </div> <!-- end of container -->
 </section>
 
 </main> 
@@ -71,20 +67,15 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
   <section class="placeholder-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
            <p class="center">Made by Ricky Nguyen</p>
-        </div>
-      </div>
-    </div>
+           <!-- <img src="https://www.themoviedb.org/assets/static_cache/9b3f9c24d9fd5f297ae433eb33d93514/images/v4/logos/408x161-powered-by-rectangle-green.png" class="tmdb-img right" alt="the movie database logo"> -->
   </section>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
-  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
 <!-- need to add API script -->
 
 </body>
