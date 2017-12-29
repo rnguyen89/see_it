@@ -1,53 +1,33 @@
-//future goals
-  //implement lightbox
-  //play thumbnails within same page
-
 'use strict';
   
 const TMDB_SEARCH_URL = 'https://api.themoviedb.org/3/discover/movie?';
   
-const TMDB_POSTER = 'http://image.tmdb.org/t/p/w185/';  
+const TMDB_POSTER = 'http://image.tmdb.org/t/p/w185/'; 
+
+const TMDB_TRAILER = 'https://api.themoviedb.org/3/movie/177572/videos?api_key=726674d72b203bef2e539a683d3d257b&language=en-US'
 
 // loop through data
 
-function callback(data) {
-  const results = data.items.map((item, index) => renderResult(item));
-    $('.js-results').html(results);
-}
-
 
 function callback(data) {
-    
-    $.each(data, function(i, item) {
+    $('.js-results').html('');
+    $.each(data.results, function(i, item) {
 
-          $('.js-results').html(`
-          <div class="center">
-          <img src="http://image.tmdb.org/t/p/w185/${data.results[0].poster_path}">
-        </div>
-        <div class="center">
-        <h2>${data.results[0].title}</h2>
-        <p>${data.results[0].overview}</p>
-      </div>
-
-      <div class="center">
-      <img src="http://image.tmdb.org/t/p/w185/${data.results[1].poster_path}">
-    </div>
-    <div class="center">
-    <h2>${data.results[1].title}</h2>
-    <p>${data.results[1].overview}</p>
-    </div>
-    <div class="center">
-    <img src="http://image.tmdb.org/t/p/w185/${data.results[2].poster_path}">
-    </div>
-    <div class="center">
-    <h2>${data.results[2].title}</h2>
-    <p>${data.results[2].overview}</p>
-    </div>
-    `)
-      
+        $('.js-results').append(`
+          <div class="wrapper center">
+            <img src="http://image.tmdb.org/t/p/w185/${item.poster_path}">
+            <div class="center">
+              <h2>${item.title}</h2>
+              <p class="movie-desc">${item.overview}</p>
+              <p>Vote Average: ${item.vote_average} & count ${item.vote_count} & pop ${item.popularity}</p>
+              <a href="https://www.themoviedb.org/movie/${item.id}/videos">link to video</a>
+            </div>
+          </div>
+        `) 
     })
     console.log(data);
 }
+
 
     $('#js-search-form').submit(function (e) {
         e.preventDefault();
@@ -71,15 +51,9 @@ function callback(data) {
         };
       
         $.ajax(settings);
+        $('.js-search').val("")
       });
     
 //render to dom
 
-// function renderResult(items) {
-//   console.log(items);
-//     $('.js-results').html(`
-//       <div>
-//         <img src="TMDB_POSTER ${index.results[0].poster_path}">
-//       </div>
-//     `)
-// }
+
