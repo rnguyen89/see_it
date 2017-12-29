@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: rgb(53, 49, 50);
+  background-color: #757575;
   color: whitesmoke;
 }
 
@@ -19,16 +19,20 @@ input::placeholder {
 
 .movie-desc {
   width: 100%;
+  height: 100%;
   margin: 0 auto;
-  position: relative;
+  font-size: 1.5em;
+}
+.movie-desc1 {
+  border: 3px solid white;
 }
 
 .collapsible-header {
-  background-color: rgb(53, 49, 50);
+  background-color: #9E9E9E;
 }
 
 .poster {
-  width: 30%;
   margin: 0 auto;
+  width: 50%;
 }
 

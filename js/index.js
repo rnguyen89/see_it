@@ -20,7 +20,9 @@ function callback(data) {
            </div>
            <div class="collapsible-body">
            <div><img class="materialboxed responsive-img" data-caption="Poster of the movie: ${item.title}" src="http://image.tmdb.org/t/p/original/${item.poster_path}"></div>
-           <p class="movie-desc col s6">${item.overview}</p>
+           <div class="movie-desc center">
+           <p class="movie-desc1">${item.overview}</p>
+           </div>
            <p>Vote Average: ${item.vote_average} & count ${item.vote_count} & pop ${item.popularity}</p>
            <a href="https://www.themoviedb.org/movie/${item.id}/videos">link to video</a>
            </div>
