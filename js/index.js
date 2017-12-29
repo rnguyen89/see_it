@@ -8,25 +8,55 @@ const TMDB_TRAILER = 'https://api.themoviedb.org/3/movie/177572/videos?api_key=7
 
 // loop through data
 
-
 function callback(data) {
-    $('.js-results').html('');
-    $.each(data.results, function(i, item) {
-
-        $('.js-results').append(`
-          <div class="wrapper center">
-            <img src="http://image.tmdb.org/t/p/w185/${item.poster_path}">
-            <div class="center">
-              <h2>${item.title}</h2>
-              <p class="movie-desc">${item.overview}</p>
-              <p>Vote Average: ${item.vote_average} & count ${item.vote_count} & pop ${item.popularity}</p>
-              <a href="https://www.themoviedb.org/movie/${item.id}/videos">link to video</a>
-            </div>
-          </div>
-        `) 
-    })
-    console.log(data);
+  $('.js-results').html('');
+  $.each(data.results, function(i, item) {
+    
+      $('.js-results').append(`
+ 
+          <li>
+           <div class="collapsible-header"><i class="medium material-icons">movie</i>
+           ${item.title}
+           </div>
+           <div class="collapsible-body">
+           <div><img class="materialboxed responsive-img" data-caption="Poster of the movie: ${item.title}" src="http://image.tmdb.org/t/p/original/${item.poster_path}"></div>
+           <p class="movie-desc col s6">${item.overview}</p>
+           <p>Vote Average: ${item.vote_average} & count ${item.vote_count} & pop ${item.popularity}</p>
+           <a href="https://www.themoviedb.org/movie/${item.id}/videos">link to video</a>
+           </div>
+ 
+ 
+      `) 
+      $('.collapsible').collapsible();
+      $('.materialboxed').materialbox();
+      
+      
+  })
+  console.log(data);
 }
+
+
+// function callback(data) {
+//     $('.js-results').html('');
+//     $.each(data.results, function(i, item) {
+      
+//         $('.js-results').append(`
+   
+//           <div class="wrapper center">
+//             <img src="http://image.tmdb.org/t/p/w185/${item.poster_path}">
+//             <div class="center">
+//               <h2>${item.title}</h2>
+//               <p class="movie-desc">${item.overview}</p>
+//               <p>Vote Average: ${item.vote_average} & count ${item.vote_count} & pop ${item.popularity}</p>
+//               <a href="https://www.themoviedb.org/movie/${item.id}/videos">link to video</a>
+//             </div>
+//           </div>
+   
+//         `) 
+      
+//     })
+//     console.log(data);
+// }
 
 
     $('#js-search-form').submit(function (e) {
@@ -42,7 +72,7 @@ function callback(data) {
             include_adult: false,
             include_video: true,
             page: 1,
-            primary_release_year: q       
+            primary_release_year: q
           },
 
           dataType: 'json',
@@ -55,5 +85,4 @@ function callback(data) {
       });
     
 //render to dom
-
 

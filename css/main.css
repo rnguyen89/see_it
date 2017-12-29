@@ -18,6 +18,17 @@ input::placeholder {
 }
 
 .movie-desc {
-  width: 50%;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.collapsible-header {
+  background-color: rgb(53, 49, 50);
+}
+
+.poster {
+  width: 30%;
   margin: 0 auto;
 }
+
