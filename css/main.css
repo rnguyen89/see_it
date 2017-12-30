@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #757575;
+  background-color: #1c1c1c;
   color: whitesmoke;
 }
 
@@ -25,14 +25,20 @@ input::placeholder {
 }
 .movie-desc1 {
   border: 3px solid white;
+  color: white;
 }
 
-.collapsible-header {
-  background-color: #9E9E9E;
+.collapsible-header, .collapsible-body {
+  background-color: #22201f;
+  color: white;
 }
 
 .poster {
   margin: 0 auto;
-  width: 50%;
+  /* width: 50%; */
 }
 
+.modal .modal-content {
+  color: white;
+  background-color: #1a1c20;
+}
