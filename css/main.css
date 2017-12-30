@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 body {
@@ -26,6 +26,7 @@ input::placeholder {
 .movie-desc1 {
   border: 3px solid white;
   color: white;
+  padding: 1em;
 }
 
 .collapsible-header, .collapsible-body {
@@ -41,4 +42,14 @@ input::placeholder {
 .modal .modal-content {
   color: white;
   background-color: #1a1c20;
+}
+
+@media (max-width: 700px) {
+  .movie-desc1 {
+    font-size: .7em;
+  }
+  .modal-content h4 {
+    font-size: 1.5em;
+    /* font-weight: 700; */
+  }
 }
