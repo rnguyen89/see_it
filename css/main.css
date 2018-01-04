@@ -82,6 +82,9 @@ input::placeholder {
 }
 
 @media (max-width: 700px) {
+  .title {
+    margin-top: 50px;
+  }
   .movie-desc1 {
     font-size: .7em;
   }
