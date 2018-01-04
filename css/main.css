@@ -62,8 +62,9 @@ input::placeholder {
 }
 
 .collapsible-header, .collapsible-body {
-  background-color: #22201f;
-  color: white;
+  /* background-color: #22201f; */
+  color: black;
+  border: 10px solid whitesmoke;
 }
 
 .collapsible-header {
@@ -100,5 +101,8 @@ input::placeholder {
   }
   .form-head {
     font-size: 1em;
+  }
+  .fix-scroll {
+    height: 300px;
   }
 }

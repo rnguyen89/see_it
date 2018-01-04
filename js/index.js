@@ -23,12 +23,18 @@ function callback(data) {
           <div class="collapsible-body">
             <div class="row">
               <div class="col m4 s12 center">
-                <img class="materialboxed responsive-img poster" data-caption="Poster of the movie: ${item.title}" src="http://image.tmdb.org/t/p/w500/${item.poster_path}"></div>
-                    <div class="col m8 s12 movie-desc center">
+                <img class="materialboxed responsive-img poster z-depth-5" data-caption="Poster of the movie: ${item.title}" src="http://image.tmdb.org/t/p/w500/${item.poster_path}"></div>
+                  <div class="col m8 s12 movie-desc center">
                       <p class="movie-desc1">${item.overview}</p>
+                      
+                      <div class="center white-text user-avg">
+                      
+                      <p><i class=" material-icons v-align">star_border</i>
+                      Vote Score: ${item.vote_average}</p>
+                      </div>
                   </div>
-                      <p>Vote Average: ${item.vote_average} & count ${item.vote_count} & pop ${item.popularity}</p>
-                  </div>
+
+              </div>
                   <div class="center-align">
                   <a class="center-align waves-effect waves-light btn modal-trigger red darken-2" href="#modal1">Trailer</a>
                   </div>
