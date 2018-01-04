@@ -11,6 +11,7 @@ const TMDB_POSTER = 'https://image.tmdb.org/t/p/w185/';
 
 function callback(data) {
   $('.js-results').html('');
+  $('.js-results').blur();
   $.each(data.results, function(i, item) {
     
     var div = $(`
