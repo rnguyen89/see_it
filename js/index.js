@@ -49,7 +49,7 @@ function callback(data) {
   console.log(data);
 }
 
-function openModal(item){
+function openModal(item) {
   $('.modal-content h4').text(item.title);
   getTrailer(item);
 }
@@ -94,6 +94,7 @@ function callbackTrailer(data) {
     $('#trailer').attr("src",`//www.youtube.com/embed/${data.results[0].key}?rel=0`);
   } else {
     $('.model-content h4').text("Trailer not found");
+    $('#trailer').attr("src", "");
   }
 }
 
