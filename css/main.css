@@ -22,7 +22,7 @@ h1 {
   overflow: auto;
   /* width:1000px; */
   overflow-y: auto;
-  height: 500px;
+  height: 600px;
 }
 
 #hero .bg-image {
@@ -82,8 +82,8 @@ input::placeholder {
   background-color: #1a1c20;
 }
 
-.placeholder-footer {
-  margin-top: 50px;
+footer {
+  margin-top: 500px;
   background-color: whitesmoke;
   opacity: 0.8;
 }
@@ -132,5 +132,8 @@ a {
   }
   .tmdb-img {
     margin: 10px;
+  }
+  footer {
+    margin-top: 200px;
   }
 }
