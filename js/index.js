@@ -1,8 +1,8 @@
 'use strict';
-  
+
 const TMDB_SEARCH_URL = 'https://api.themoviedb.org/3/discover/movie?';
-  
-const TMDB_POSTER = 'https://image.tmdb.org/t/p/w185/'; 
+
+const TMDB_POSTER = 'https://image.tmdb.org/t/p/w185/';
 
 // const TMDB_TRAILER = `https://api.themoviedb.org/3/movie/${item.id}/videos?`
 
@@ -11,9 +11,8 @@ const TMDB_POSTER = 'https://image.tmdb.org/t/p/w185/';
 
 function callback(data) {
   $('.js-results').html('');
-  $('.js-results').blur();
-  $.each(data.results, function(i, item) {
-    
+  $.each(data.results, function (i, item) {
+
     var div = $(`
  
       <li>
@@ -29,8 +28,8 @@ function callback(data) {
                       
                       <div class="center white-text user-avg">
                       
-                      <p><i class=" material-icons v-align">star_border</i>
-                      Vote Score: ${item.vote_average}</p>
+                      <p>
+                      User Score: ${item.vote_average}<i class=" material-icons tiny">star</i></p>
                       </div>
                   </div>
 
@@ -41,32 +40,24 @@ function callback(data) {
            </div>
             
            </li>
-       `) 
-      
-       div.click(function(e) {
-        openModal(item);
-       })
+       `)
 
-      $('.js-results').append(div)
-      $('.collapsible').collapsible();
-      $('.materialboxed').materialbox();
-      $('.modal').modal();
-      
+    div.click(function (e) {
+      openModal(item);
+    })
+
+    $('.js-results').append(div)
+    $('.collapsible').collapsible();
+    $('.materialboxed').materialbox();
+    $('.modal').modal();
+
   })
-  console.log(data);
 }
 
 function openModal(item) {
   $('.modal-content h4').text(item.title);
   getTrailer(item);
 }
-
-      // second endpoint //
-//need to get key from second endpoint
-//need to use ${item.id} to get correct key
-//need to add key to youtube link:
-  // "//www.youtube.com/embed/${key-goes-here}?rel=0"
-
 
 
 $('#js-search-form').submit(function (e) {
@@ -88,39 +79,39 @@ $('#js-search-form').submit(function (e) {
     type: 'GET',
     success: callback
   };
-      
-    $.ajax(settings);
-    $('.js-search').val("")
+
+  $.ajax(settings);
+  $('.js-search').val("")
 });
-    
-//render to dom
+
+
+// GET youtube key from TMDB API and render youtube movie trailer to DOM
 
 function callbackTrailer(data) {
-  console.log(data);
-  if(data.results.length > 0) {
-    $('#trailer').attr("src",`//www.youtube.com/embed/${data.results[0].key}?rel=0`);
+  if (data.results.length > 0) {
+    $('#trailer').attr("src", `//www.youtube.com/embed/${data.results[0].key}?rel=0`);
   } else {
-    $('.model-content h4').text("Trailer not found");
+    $('.modal-content h4').text("Trailer not found");
     $('#trailer').attr("src", "");
   }
 }
 
 function getTrailer(item) {
 
-const TMDB_TRAILER = `https://api.themoviedb.org/3/movie/${item.id}/videos?`
+  const TMDB_TRAILER = `https://api.themoviedb.org/3/movie/${item.id}/videos?`
 
-const trailerKey = {
-  url: TMDB_TRAILER,
-  data: {
-    api_key: '726674d72b203bef2e539a683d3d257b',
-    language: 'en-US',
-  },
+  const trailerKey = {
+    url: TMDB_TRAILER,
+    data: {
+      api_key: '726674d72b203bef2e539a683d3d257b',
+      language: 'en-US',
+    },
 
-  dataType: 'json',
-  type: 'GET',
-  success: callbackTrailer
-};
+    dataType: 'json',
+    type: 'GET',
+    success: callbackTrailer
+  };
 
-$.ajax(trailerKey);
+  $.ajax(trailerKey);
 
 }

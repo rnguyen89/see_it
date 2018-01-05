@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <!-- Basic Page Needs
@@ -15,86 +16,117 @@
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+
+
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
   <link rel="stylesheet" type="text/css" href="css/main.css">
 
 
- 
+
 </head>
+
 <body>
 
 
-<!-- hero content goes here
+  <!-- hero content goes here
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<header id="hero">
-  <div class="bg-image"></div>
+  <header id="hero">
+    <div class="bg-image"></div>
     <div class="container">
       <div class="row">
         <div class="col s12">
           <h1 class="center title">Top Movies</h1>
-            <form action="#" id="js-search-form">
-              <fieldset class="center">
-                <!-- <legend>Search popular movies based on year</legend> -->
-                <p class="center form-head">Search most popular movies based on year</p>
-                <label for="search">
-                  <input type="text" name="search"    placeholder="2011, 2013, 2015, 2017, etc" class="js-search">
-                  </label>
-                  <button class="btn red darken-2 pulse">Submit</button>
-              </fieldset>
-            </form>
+          <form action="#" id="js-search-form">
+            <fieldset class="center">
+              <!-- <legend>Search popular movies based on year</legend> -->
+              <p class="center form-head">Search most popular movies based on year</p>
+              <label for="search">
+                <input type="number" name="search" placeholder="2011, 2013, 2015, 2017, etc" class="js-search" required max=2018 min=1883
+                />
+              </label>
+              <button class="js-btn btn red darken-2 pulse">Submit</button>
+            </fieldset>
+          </form>
         </div>
       </div>
-  </div>
-</header>
-
-<main role="main">
-
-  <!-- container for results
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <section>
-   <div class="container">
-     <div class="fix-scroll">
-    <ul class="js-results collapsible popout" aria-live="assertive">
-
-    </ul>
     </div>
+  </header>
+
+  <main role="main">
+
+    <!-- container for results
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section>
+      <div class="container">
+        <div class="fix-scroll">
+          <ul class="js-results collapsible popout" aria-live="assertive">
+
+          </ul>
+        </div>
 
 
-  
-    <!-- Modal Structure -->
-    <div id="modal1" class="modal center-align">
-      <div class="modal-content">
-        <h4>Modal Header</h4>
-          <div class="video-container">
-            <iframe width="853" height="480" id="trailer" src="" frameborder="0" allowfullscreen>
-            </iframe> 
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal center-align">
+          <div class="modal-content">
+            <h4>Modal Header</h4>
+            <div class="video-container">
+              <iframe width="853" height="480" id="trailer" src="" frameborder="0" allowfullscreen>
+              </iframe>
+            </div>
           </div>
-      </div>
 
 
-  </div>
-  </section>
+        </div>
+    </section>
 
-</main> 
+  </main>
 
-<!-- footer
+  <!-- footer
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <section class="placeholder-footer">
-           <p class="center">Made by Ricky Nguyen</p>
-           <!-- <img src="https://www.themoviedb.org/assets/static_cache/9b3f9c24d9fd5f297ae433eb33d93514/images/v4/logos/408x161-powered-by-rectangle-green.png" class="tmdb-img right" alt="the movie database logo"> -->
-  </section>
+  <footer class="placeholder-footer">
+    <div class="row">
+      <div class="col m6 s12">
+        <div class="valign-wrapper">
+          <ul class="social-btn">
+            <li>
+              <a href="mailto:rnguyen89@gmail.com" target="_blank">
+                <i class="far fa-envelope fa-3x"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/rnguyen89/see_it" target="_blank">
+                <i class="fab fa-github fa-3x"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/ricky-nguyen-72218898/" target="_blank">
+                <i class="fab fa-linkedin fa-3x"></i>
+              </a>
+          </ul>
+        </div>
+      </div>
+      <div class="col m6 s12">
 
-<!-- End Document
+        <img src="https://www.themoviedb.org/static_cache/v4/logos/293x302-powered-by-square-blue-ee05c47ab249273a6f9f1dcafec63daba386ca30544567629deb1809395d8516.png"
+          class="tmdb-img right" alt="the movie database logo">
+      </div>
+    </div>
+  </footer>
+
+  <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
-<!-- need to add API script -->
+  <!-- need to add API script -->
 
 </body>
+
 </html>
