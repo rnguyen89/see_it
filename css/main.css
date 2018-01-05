@@ -120,9 +120,7 @@ a {
   .collapsible-header, .collapsible-body {
     font-size: 1em;
   }
-  #js-search-form {
-    /* height: 100px; */
-  }
+
   .js-btn {
     display: inline-block;
   }
@@ -133,6 +131,6 @@ a {
     height: 300px;
   }
   .tmdb-img {
-    margin: 0 auto;
+    margin: 10px;
   }
 }
