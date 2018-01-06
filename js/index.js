@@ -4,14 +4,13 @@ const TMDB_SEARCH_URL = 'https://api.themoviedb.org/3/discover/movie?';
 
 const TMDB_POSTER = 'https://image.tmdb.org/t/p/w185/';
 
-// const TMDB_TRAILER = `https://api.themoviedb.org/3/movie/${item.id}/videos?`
-
 
 // This function receives data from AJAX and appends data to DOM
 
 function callback(data) {
   $('.js-results').html('');
   $.each(data.results, function (i, item) {
+    console.log(data)
 
     var div = $(`
  
