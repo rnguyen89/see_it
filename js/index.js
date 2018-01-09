@@ -5,13 +5,26 @@ const TMDB_SEARCH_URL = 'https://api.themoviedb.org/3/discover/movie?';
 const TMDB_POSTER = 'https://image.tmdb.org/t/p/w185/';
 
 
+function startSearchScroll() {
+  window.scroll({
+    top: $('#js-search-form').offset().top,
+    left: 0,
+    behavior: 'smooth'
+  });
+}
+
+function clickScrollEvent() {
+  $('.start-button').on('click', function(e){
+    startSearchScroll();
+  })
+}
+
+
 // This function receives data from AJAX and appends data to DOM
 
-function callback(data) {
+function callbackMovieData(data) {
   $('.js-results').html('');
   $.each(data.results, function (i, item) {
-    console.log(data)
-
     var div = $(`
  
       <li>
@@ -34,7 +47,7 @@ function callback(data) {
 
               </div>
                   <div class="center-align">
-                  <a class="center-align waves-effect waves-light btn modal-trigger red darken-2" href="#modal1">Trailer</a>
+                  <a class="center-align waves-effect waves-light btn modal-trigger red darken-2 pulse" href="#modal1">Trailer</a>
                   </div>
            </div>
             
@@ -58,30 +71,6 @@ function openModal(item) {
   getTrailer(item);
 }
 
-
-$('#js-search-form').submit(function (e) {
-  e.preventDefault();
-  var q = $('.js-search').val();
-  const settings = {
-    url: TMDB_SEARCH_URL,
-    data: {
-      api_key: '726674d72b203bef2e539a683d3d257b',
-      language: 'en-US',
-      sort_by: 'popularity.desc',
-      include_adult: false,
-      include_video: true,
-      page: 1,
-      primary_release_year: q
-    },
-
-    dataType: 'json',
-    type: 'GET',
-    success: callback
-  };
-
-  $.ajax(settings);
-  $('.js-search').val("")
-});
 
 
 // GET youtube key from TMDB API and render youtube movie trailer to DOM
@@ -114,3 +103,37 @@ function getTrailer(item) {
   $.ajax(trailerKey);
 
 }
+
+function getMovieData() {
+  var q = $('.js-search').val();
+  const settings = {
+    url: TMDB_SEARCH_URL,
+    data: {
+      api_key: '726674d72b203bef2e539a683d3d257b',
+      language: 'en-US',
+      sort_by: 'popularity.desc',
+      include_adult: false,
+      include_video: true,
+      page: 1,
+      primary_release_year: q
+    },
+
+    dataType: 'json',
+    type: 'GET',
+    success: callbackMovieData
+  };
+
+  $.ajax(settings);
+  $('.js-search').val("")
+};
+
+function watchSubmit(){
+    clickScrollEvent();
+    $('#js-search-form').submit(function (e) {
+      e.preventDefault();
+      getMovieData();
+      getTrailer();
+    });
+  }
+
+  watchSubmit();
