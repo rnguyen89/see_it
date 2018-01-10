@@ -14,7 +14,7 @@ function startSearchScroll() {
 }
 
 function clickScrollEvent() {
-  $('.start-button').on('click', function(e){
+  $('.start-button').on('click', function (e) {
     startSearchScroll();
   })
 }
@@ -127,13 +127,13 @@ function getMovieData() {
   $('.js-search').val("")
 };
 
-function watchSubmit(){
-    clickScrollEvent();
-    $('#js-search-form').submit(function (e) {
-      e.preventDefault();
-      getMovieData();
-      getTrailer();
-    });
-  }
+function watchSubmit() {
+  clickScrollEvent();
+  $('#js-search-form').submit(function (e) {
+    e.preventDefault();
+    getMovieData();
+    getTrailer();
+  });
+}
 
-  watchSubmit();
+watchSubmit();

@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  /* border: 1px solid red; */
   margin: 0;
   padding: 0;
 }
@@ -15,35 +14,32 @@
 .title {
   margin: 0;
   font-style: italic;
-  /* top: 50%; */
-  /* position: relative; */
-  padding-top: 200px;
-  text-shadow: 2px 2px 8px black
+  text-shadow: 2px 2px 8px black;
+  letter-spacing: 2px;
 }
 
 .about-desc {
-  padding: 1em;
+  padding: 2em;
   text-shadow: 2px 2px 8px black;
   font-size: 1.5em;
-  
+  letter-spacing: 1.5px;
 }
 
 .fix-scroll {
   overflow: auto;
-  /* width:1000px; */
   overflow-y: auto;
   height: 800px;
 }
 
 #intro {
   background: url("https://static.pexels.com/photos/274937/pexels-photo-274937.jpeg") no-repeat;
-  z-index: -1;
-  /* width: 100%; */
   height: 100vh;
   background-position: center;
   background-size: cover;
-  /* position: absolute; */
-  /* opacity: 0.5; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
@@ -84,7 +80,6 @@ input::placeholder {
 
 .poster {
   margin: 0 auto;
-  /* width: 50%; */
 }
 
 .modal .modal-content {
@@ -100,29 +95,32 @@ footer {
 
 .tmdb-img {
   width: 100px;
-  margin: 2em;
+  margin: 1em;
 }
 
 .social-btn li {
   display: inline-block;
-  padding: 1em;
-  margin-top: 30px;
+  padding: 50px 10px;
 }
 
 a {
   color: black;
 }
 
+.tmdb-link {
+  color: inherit;
+}
+.tmdb-link:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 700px) {
-  .title {
-    padding-top: 200px;
-  }
+
   .movie-desc1 {
     font-size: .7em;
   }
   .modal-content h4 {
     font-size: 1.5em;
-    /* font-weight: 700; */
   }
   body, html {
     height: 0;
@@ -130,18 +128,18 @@ a {
   .collapsible-header, .collapsible-body {
     font-size: 1em;
   }
-
   .js-btn {
     display: inline-block;
   }
   .form-head {
     font-size: 1em;
+    padding: .5em;
+  }
+  form {
+    margin-bottom: 20px;
   }
   .fix-scroll {
-    height: 300px;
-  }
-  .tmdb-img {
-    margin: 10px;
+    height: 500px;
   }
   footer {
     margin-top: 200px;
