@@ -20,9 +20,6 @@ function clickScrollEvent() {
   })
 }
 
-
-// This function receives data from AJAX and appends data to DOM
-
 function callbackMovieData(data) {
   $('.js-results').html('');
   $.each(data.results, function (i, item) {
@@ -72,10 +69,6 @@ function openModal(item) {
   getTrailer(item);
 }
 
-
-
-// GET youtube key from TMDB API and render youtube movie trailer to DOM
-
 function callbackTrailer(data) {
   if (data.results.length > 0) {
     $('#trailer').attr("src", `//www.youtube.com/embed/${data.results[0].key}?rel=0`);
@@ -102,7 +95,6 @@ function getTrailer(item) {
   };
 
   $.ajax(trailerKey);
-
 }
 
 function getMovieData() {
