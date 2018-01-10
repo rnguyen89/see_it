@@ -16,6 +16,7 @@ function startSearchScroll() {
 function clickScrollEvent() {
   $('.start-button').on('click', function (e) {
     startSearchScroll();
+    $('#js-search-form').removeClass('hidden');
   })
 }
 

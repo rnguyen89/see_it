@@ -51,6 +51,10 @@ input::placeholder {
   text-align: center;
 }
 
+form.hidden {
+  visibility: hidden;
+}
+
 .form-head {
   font-size: 1.5em;
 }
