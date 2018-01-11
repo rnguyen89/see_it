@@ -49,6 +49,10 @@ body {
 
 input::placeholder {
   text-align: center;
+  color: gray;
+  font-size: 1em;
+  font-weight: 700;
+  background-color: #e5e8b3;
 }
 
 form.hidden {
