@@ -45,7 +45,7 @@ function callbackMovieData(data) {
 
               </div>
                   <div class="center-align">
-                  <a class="center-align waves-effect waves-light btn modal-trigger red darken-2 pulse" href="#modal1">Trailer</a>
+                  <a class="center-align waves-effect waves-light btn modal-trigger red darken-2" href="#modal1">Trailer</a>
                   </div>
            </div>
             
