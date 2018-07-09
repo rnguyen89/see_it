@@ -1,4 +1,5 @@
 This is the first capstone project for Thinkful (https://www.thinkful.com/).
+Live App: https://rnguyen89.github.io/see_it/
 
 ##Introduction 
 
