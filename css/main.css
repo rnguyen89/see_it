@@ -1,7 +1,137 @@
-* {
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,900");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.dropdown-content li > a,
+.dropdown-content li > span {
+  font-size: 16px;
+  color: #fb3a2f;
+  display: block;
+  line-height: 22px;
+  padding: 14px 16px;
+}
+
+nav ul a:hover {
+  background-color: rgba(253, 175, 180, 0.4);
+}
+
+.brand-logo {
+  padding-left: 15px !important;
+}
+
+.fa-3x {
+  font-size: 2em;
+}
+
+#intro {
+  /* background: url("https://static.pexels.com/photos/274937/pexels-photo-274937.jpeg")
+    no-repeat; */
+  background-image: linear-gradient(#ff6464), rgba(255, 0, 0, 1);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popcorn-image {
+  position: absolute;
+  z-index: -8;
+  bottom: -110px;
+  left: -400px;
+}
+
+.card .card-action {
+  padding: 16px 24px 1px;
+}
+
+fieldset {
+  border: none;
+  text-align: left;
+}
+
+.card-title {
+  font-size: 5em !important;
+  font-weight: 300 !important;
+  width: 100% !important;
+}
+
+.btn {
+  border-radius: 25px;
+  background-color: #fb3a2f;
+}
+
+.btn:hover,
+.btn-large:hover {
+  background-color: lightcoral;
+}
+
+input[type="number"]:focus {
+  border-bottom: 1px solid #fe665a !important;
+}
+
+input[type="number"] {
+  padding-left: 0.5em !important;
+}
+
+footer {
+  background-color: whitesmoke;
+  opacity: 0.8;
+}
+
+.down-arrow {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 80%;
+  left: 45%;
+}
+
+.down-arrow:focus {
+  background-color: transparent;
+  border: none;
+}
+
+.down-arrow:hover {
+  transition: all ease-in 0.4s;
+  width: 50px;
+  color: red;
+}
+
+.tmdb-img {
+  width: 50px;
+  margin: 1em;
+}
+
+.social-btn li {
+  display: inline-block;
+  padding: 50px 10px;
+}
+
+a {
+  color: black;
+}
+
+.tmdb-link {
+  color: inherit;
+}
+.tmdb-link:hover {
+  text-decoration: underline;
+}
+
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 #js-search-form {
@@ -13,13 +143,12 @@
 
 .title {
   margin: 0;
-  font-style: italic;
   text-shadow: 2px 2px 8px black;
   letter-spacing: 2px;
 }
 
 .about-desc {
-  padding: 2em;
+  padding: 1em;
   text-shadow: 2px 2px 8px black;
   font-size: 1.5em;
   letter-spacing: 1.5px;
@@ -32,7 +161,8 @@
 }
 
 #intro {
-  background: url("https://static.pexels.com/photos/274937/pexels-photo-274937.jpeg") no-repeat;
+  background: url("https://static.pexels.com/photos/274937/pexels-photo-274937.jpeg")
+    no-repeat;
   height: 100vh;
   background-position: center;
   background-size: cover;
@@ -53,7 +183,6 @@ input::placeholder {
   font-size: 1em;
   font-weight: 500;
   background-color: rgb(250, 255, 189);
-
 }
 
 form.hidden {
@@ -76,7 +205,8 @@ form.hidden {
   line-height: 1.8em;
 }
 
-.collapsible-header, .collapsible-body {
+.collapsible-header,
+.collapsible-body {
   color: black;
   border: 10px solid whitesmoke;
   opacity: 0.9;
@@ -84,7 +214,6 @@ form.hidden {
 
 .collapsible-header {
   font-size: 1.3em;
-  
 }
 
 .poster {
@@ -124,17 +253,18 @@ a {
 }
 
 @media (max-width: 700px) {
-
   .movie-desc1 {
-    font-size: .7em;
+    font-size: 0.7em;
   }
   .modal-content h4 {
     font-size: 1.5em;
   }
-  body, html {
+  body,
+  html {
     height: 0;
   }
-  .collapsible-header, .collapsible-body {
+  .collapsible-header,
+  .collapsible-body {
     font-size: 1em;
   }
   .js-btn {
@@ -142,7 +272,7 @@ a {
   }
   .form-head {
     font-size: 1em;
-    padding: .5em;
+    padding: 0.5em;
   }
   form {
     margin-bottom: 20px;
@@ -153,4 +283,4 @@ a {
   footer {
     margin-top: 200px;
   }
-}
+} */

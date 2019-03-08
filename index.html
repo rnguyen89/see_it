@@ -28,47 +28,89 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
     crossorigin="anonymous">
+    <link rel="movie icon" type="image/png" href="https://img.icons8.com/android/24/000000/movie.png"/>
+
 
 </head>
 
-
 <body>
+  <div class="navbar-fixed">
+    <ul id="menu" class="dropdown-content">
+        <li><a href="about.html">about</a></li>
+        <li>
+            <a href="mailto:rnguyen89@gmail.com" target="_blank">
+              <i class="far fa-envelope fa-3x"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/rnguyen89/see_it" target="_blank">
+              <i class="fab fa-github fa-3x"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/ricky-nguyen-72218898/" target="_blank">
+              <i class="fab fa-linkedin fa-3x"></i>
+            </a>
+            </li>
+      </ul>
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo">Seeit</a>
+          <ul class="right">
 
+            
+            <li><a class="dropdown-btn" href="#" data-activates="menu"><i class="material-icons right">menu</i></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   <!-- hero content goes here
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <header id="intro" class="hidden">
+  <header id="intro">
 
-    <h1 class="title animated infinite pulse">Top Movies</h1>
-    <p class="about-desc center-align">This app is for users who wants to search for popular movies based on year.
-      <br> Data is gathered from
-      <a href="https://www.themoviedb.org/?language=en" target="_blank" class="tmdb-link">The Movie DB API.</a>
-      <br>
-    </p>
-    <div class="">
-      <button class="start-button waves-effect waves-light btn red darken-2">Start</button>
-    </div>
+    <section id="hero">
+        <div class="container">
+            <div class="row">
+              <div class="col s12">
+                <div class="card white darken-1">
+                  <div class="card-content black-text">
+                    <span class="card-title">Search</span>
+                    
+                  </div>
+                  <div class="card-action">
+                    <div class="row">
+                      <div class="col s12">
+                        <form action="#" id="js-search-form" class="">
+                          <fieldset>
+                            <p class="form-head">See ratings and trailers for top movies based on year</p>
+                            <label for="search">
+                              <input type="number" name="search" placeholder="1989, 1994, 2007, 2017, etc" class="js-search" required max=2018 min=1883
+                              />
+                            </label>
+                            <button class="js-btn btn waves-effect waves-light">Submit</button>
+                          </fieldset>
+                        </form>
+                      </div>
+                    </div>
+      <img src="/images/Image 1.svg" alt="picture of popcorn" class="popcorn-image">      
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="center-align">
+            <a href="#results"><button class="down-arrow hidden"><i class="large material-icons">keyboard_arrow_down</i></button></a>
+          
+        </div>     
   </header>
+
 
   <!-- hero content goes here
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <main role="main">
-    <section id="hero">
-      <div class="container">
-        <div class="row">
-          <div class="col s12">
-            <form action="#" id="js-search-form" class="hidden">
-              <fieldset class="center">
-                <p class="center form-head">Search most popular movies based on year</p>
-                <label for="search">
-                  <input type="number" name="search" placeholder="1989, 1994, 2007, 2017, etc" class="js-search" required max=2018 min=1883
-                  />
-                </label>
-                <button class="js-btn btn red darken-2 waves-effect waves-light">Submit</button>
-              </fieldset>
-            </form>
-          </div>
-        </div>
-      </div>
+
+
     </section>
 
 
@@ -78,15 +120,14 @@
     <section>
       <div class="container">
         <div class="fix-scroll">
-          <ul class="js-results collapsible popout" aria-live="assertive">
+          <ul class="js-results collapsible popout" aria-live="assertive" id="results">
 
           </ul>
         </div>
 
 
-
         <!-- Modal Structure -->
-        <div id="modal1" class="modal center-align">
+        <div id="modal1" class="modal left-align">
           <div class="modal-content">
             <h4>Modal Header</h4>
             <div class="video-container">
@@ -104,40 +145,12 @@
   <!-- footer
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <footer>
-    <div class="row">
-      <div class="col m6">
-        <ul class="social-btn">
-          <li>
-            <a href="mailto:rnguyen89@gmail.com" target="_blank">
-              <i class="far fa-envelope fa-3x"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/rnguyen89/see_it" target="_blank">
-              <i class="fab fa-github fa-3x"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/ricky-nguyen-72218898/" target="_blank">
-              <i class="fab fa-linkedin fa-3x"></i>
-            </a>
-        </ul>
-      </div>
-      <div class="col m6">
-        <a href="https://www.themoviedb.org/?language=en" target="_blank">
-          <img src="https://www.themoviedb.org/static_cache/v4/logos/293x302-powered-by-square-blue-ee05c47ab249273a6f9f1dcafec63daba386ca30544567629deb1809395d8516.png"
-            class="tmdb-img right" alt="the movie database logo">
-        </a>
-      </div>
-    </div>
-  </footer>
+
 
   <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
-</body>
 
 </html>
