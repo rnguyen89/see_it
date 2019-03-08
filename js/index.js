@@ -46,22 +46,23 @@ function callbackMovieData(data) {
                 }" src="http://image.tmdb.org/t/p/w500/${
       item.poster_path
     }"></div>
-                  <div class="col m8 s12 movie-desc center">
+                  <div class="col m8 s12 movie-desc">
                       <p class="movie-desc1">${item.overview}</p>
-                      
-                      <div class="center white-text user-avg">
+                      <div class="left-align">
+                      <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Trailer</a>
+                      <div class="left black-text user-avg">
                       
                       <p>
                       User Score: ${
                         item.vote_average
                       }<i class=" material-icons tiny">star</i></p>
                       </div>
+                      </div>
+                      
                   </div>
 
               </div>
-                  <div class="center-align">
-                  <a class="center-align waves-effect waves-light btn modal-trigger red darken-2" href="#modal1">Trailer</a>
-                  </div>
+             
            </div>
             
            </li>
