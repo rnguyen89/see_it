@@ -17,6 +17,13 @@ body {
   padding: 14px 16px;
 }
 
+.dropdown-btn {
+  color: #fff !important;
+}
+
+ul a {
+  color: #fb3a2f !important;
+}
 nav ul a:hover {
   background-color: rgba(253, 175, 180, 0.4);
 }
