@@ -87,6 +87,7 @@ fieldset {
 .btn {
   border-radius: 25px;
   background-color: #fb3a2f;
+  color: white !important;
 }
 
 .btn:hover,
